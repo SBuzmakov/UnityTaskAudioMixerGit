@@ -6,13 +6,9 @@ namespace Source.Scripts
 {
     public class ToggleSoundsMuter : MonoBehaviour
     {
-        private const float MaxVolume = 0f;
-        private const float MinVolume = -80.0f;
-        private const float VolumeMultiplier = 20f;
-        
         [SerializeField] private Toggle _muteToggle;
-        [SerializeField] private AudioMixerGroup _audioMixerGroup;
-
+        [SerializeField] private AudioListener _audioListener;
+        
         private void OnEnable()
         {
             _muteToggle.onValueChanged.AddListener(MuteSounds);
@@ -25,14 +21,7 @@ namespace Source.Scripts
 
         private void MuteSounds(bool soundsDisabled)
         {
-            if (soundsDisabled)
-            {
-                _audioMixerGroup.audioMixer.SetFloat(_audioMixerGroup.name, Mathf.Log10(MaxVolume) * VolumeMultiplier);
-            }
-            else
-            {
-                _audioMixerGroup.audioMixer.SetFloat(_audioMixerGroup.name, Mathf.Log10(MinVolume) * VolumeMultiplier);
-            }
+            _audioListener.enabled = !soundsDisabled;
         }
     }
 }

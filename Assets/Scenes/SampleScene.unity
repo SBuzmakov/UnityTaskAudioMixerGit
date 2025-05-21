@@ -204,20 +204,8 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Source.Scripts.VolumeChanger, Assembly-CSharp
-        m_MethodName: MuteSounds
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_IsOn: 1
+      m_Calls: []
+  m_IsOn: 0
 --- !u!114 &53548795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _muteToggle: {fileID: 53548794}
-  _audioMixerGroup: {fileID: 24300002, guid: 26d50855c49a2b945b12687428c29860, type: 2}
+  _audioListener: {fileID: 519420029}
 --- !u!1 &61193064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1466,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sounds ON
+  m_Text: Sounds OFF
 --- !u!222 &603753673
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1721,8 +1709,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f0332cdf01615488da37a8203b7a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioMixerGroup: {fileID: 24300002, guid: 26d50855c49a2b945b12687428c29860, type: 2}
+  _audioMixer: {fileID: 24100000, guid: 26d50855c49a2b945b12687428c29860, type: 2}
   _volumeSlider: {fileID: 745712170}
+  _audioMixerGroupName: Master
 --- !u!1 &755102807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2987,8 +2976,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f0332cdf01615488da37a8203b7a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioMixerGroup: {fileID: -7186136252075887247, guid: 26d50855c49a2b945b12687428c29860, type: 2}
+  _audioMixer: {fileID: 24100000, guid: 26d50855c49a2b945b12687428c29860, type: 2}
   _volumeSlider: {fileID: 1522563920}
+  _audioMixerGroupName: Music
 --- !u!1 &1655124883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,8 +3417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f0332cdf01615488da37a8203b7a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioMixerGroup: {fileID: 5173405882603487114, guid: 26d50855c49a2b945b12687428c29860, type: 2}
+  _audioMixer: {fileID: 24100000, guid: 26d50855c49a2b945b12687428c29860, type: 2}
   _volumeSlider: {fileID: 1801326794}
+  _audioMixerGroupName: SFX
 --- !u!1 &1978747092
 GameObject:
   m_ObjectHideFlags: 0

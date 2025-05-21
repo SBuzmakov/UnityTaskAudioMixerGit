@@ -8,8 +8,9 @@ namespace Source.Scripts
     {
         private const float VolumeMultiplier = 20f;
 
-        [SerializeField] private AudioMixerGroup _audioMixerGroup;
+        [SerializeField] private AudioMixer _audioMixer;
         [SerializeField] private Slider _volumeSlider;
+        [SerializeField] private string _audioMixerGroupName;
 
         private void OnEnable()
         {
@@ -23,7 +24,7 @@ namespace Source.Scripts
 
         private void ChangeVolume(float value)
         {
-            _audioMixerGroup.audioMixer.SetFloat(_audioMixerGroup.name, Mathf.Log10(value) * VolumeMultiplier);
+            _audioMixer.SetFloat(_audioMixerGroupName, Mathf.Log10(value) * VolumeMultiplier);
         }
     }
 }
